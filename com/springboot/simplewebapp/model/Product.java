@@ -1,10 +1,20 @@
 package com.springboot.simplewebapp.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
 
+@Component
+@Entity
 public class Product {
+    @Id
     private int productId;
     private String productName;
     private int price;
+
+    public Product() {
+
+    }
 
     public Product(int productId, String productName, int price) {
         this.productId = productId;
